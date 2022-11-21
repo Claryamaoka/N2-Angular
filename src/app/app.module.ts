@@ -11,6 +11,8 @@ import { DashboardsComponent } from './dashboards/dashboards/dashboards.componen
 import { GerenciamentoComponent } from './gerenciamento/gerenciamento/gerenciamento.component';
 import { CadastroComponent } from './cadastro/cadastro/cadastro.component';
 import { HeaderComponent } from './header/header/header.component';
+import { FormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 
 @NgModule({
@@ -27,7 +29,10 @@ import { HeaderComponent } from './header/header/header.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    FormsModule,
+    MatFormFieldModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
