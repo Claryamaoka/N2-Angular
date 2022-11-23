@@ -20,7 +20,7 @@
 }
 
 .esp{
-    width: 30%;
+    width: 25%;
 }
 
 .esp2{
@@ -34,8 +34,14 @@ span{
 .exit{
     display: flex;
     font-size: 17px;
+    margin-right: 10px;
 }
 
 .title{
-    min-width: 400px;
+    min-width: 420px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
 }

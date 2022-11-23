@@ -13,6 +13,7 @@ import { CadastroComponent } from './cadastro/cadastro/cadastro.component';
 import { HeaderComponent } from './header/header/header.component';
 import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import {HttpClientModule} from '@angular/common/http'
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatDatepickerModule,
     MatNativeDateModule,
     FormsModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    HttpClientModule    
     
   ],
   providers: [],

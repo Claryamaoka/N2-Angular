@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { provideProtractorTestingSupport } from '@angular/platform-browser';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Chart } from 'chart.js'
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-dashboards',
@@ -9,44 +10,55 @@ import { provideProtractorTestingSupport } from '@angular/platform-browser';
 export class DashboardsComponent implements OnInit {
   produtos = [
     {
-      nome: "Produto1",
+      nome: "Cereal Nestle",
       acesso: 10
     },
     {
-      nome: "Produto2",
+      nome: "Caixa Chocolate",
       acesso: 9
     },
     {
-      nome: "Produto3",
+      nome: "Sabonete",
       acesso: 8
     },
     {
-      nome: "Produto4",
+      nome: "Arroz Branco",
       acesso: 7
     },
     {
-      nome: "Produto5",
+      nome: "Queijo branco",
       acesso: 6
     },
     {
-      nome: "Produto6",
+      nome: "Presunto",
       acesso: 5
     },
     {
-      nome: "Produto7",
+      nome: "Achocolatado",
       acesso: 4
     },
     {
-      nome: "Produto8",
+      nome: "Vinagre",
       acesso: 3
     },
-  ]
+    {
+      nome: "Pão",
+      acesso: 2
+    },
+    {
+      nome: "Maçã",
+      acesso: 1
+    },
+  ];
+
+  token: any
+
   constructor() { 
     
   }
 
-  ngOnInit(): void {
-    
+  ngOnInit(){
+   this.token = localStorage.getItem("token");
   }
 
 }

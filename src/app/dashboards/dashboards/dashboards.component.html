@@ -1,36 +1,46 @@
 <div class="conteiner">
 
     <div class="sub-conteiner">
-        <div fxLayout="row wrap" class="header">
-            <div fxFlex="50" fxFill fxLayoutAlingn="start center" class="tile">
+        <div class="header">
+            <div class="tile">
                 <h1>Top Produtos</h1>
                 <h3>Os mais pesquisados</h3>
             </div>
-            <div fxFlex="50" fxFill fxLayoutAlingn="start center" class="date">
+            <div style="width: 10%;"></div>
+            <div class="date">
                 <mat-form-field appearance="fill">
                     <mat-label>Enter a date range</mat-label>
                     <mat-date-range-input [rangePicker]="picker">
                       <input matStartDate placeholder="Start date">
                       <input matEndDate placeholder="End date">
                     </mat-date-range-input>
-                    <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+                    <mat-hint>DD/MM/YYYY – DD/MM/YYYY</mat-hint>
                     <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
                     <mat-date-range-picker #picker></mat-date-range-picker>
                   </mat-form-field>
             </div>
         </div>
         
-        <ul>
-            <li *ngFor="let produto of produtos" class="lista">
-                <span class="li-produtos">Produto: {{produto.nome}}</span> - 
-                <span class="li-acesso">Acesso: {{produto.acesso}}</span>
-            </li>
-        </ul>
+        <table style="width: 100%;">
+            <tbody>
+                <tr *ngFor="let produto of produtos" class="lista">
+                    <td class="li-produtos">
+                        <span >Produto: {{produto.nome}}</span>
+                    </td>
+                    <td class="li-acesso">
+                        <span >Acessos: {{produto.acesso}}</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
     <div class="esp"></div>
 
     <div class="sub-conteiner">
-        <img src="../../../assets/grafico.webp">
+        <div class="grafico">
+            <canvas #meuCanvas> </canvas>
+        </div>
+        <!-- <img src="../../../assets/grafico.webp"> -->
     </div>
     
 </div>
